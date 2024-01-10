@@ -1,12 +1,13 @@
 public class IPhoneSettings {
 
-    private IPhoneSettings() {
-
-    }
-
     private static IPhoneSettings instance;
     private int brightness;
     private boolean wifi;
+
+    private IPhoneSettings() {
+        brightness = 50;
+        wifi = false;
+    }
 
     public static IPhoneSettings getInstance() {
         if (instance == null) {
